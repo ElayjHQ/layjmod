@@ -7,4 +7,4 @@ execute as @a at @s run summon minecraft:warden ~ ~ ~-2 {Tags:["layj_castle"]}
 execute as @a at @s run summon minecraft:wither ~2 ~2 ~1
 execute as @a at @s run summon minecraft:wither ~-2 ~2 ~-1
 execute as @a at @s run effect give @s minecraft:bad_omen 60 4 true
-execute as @a at @s run damage @e[type=minecraft:warden,tag=layj_castle] 1 minecraft:mob_attack by @s
+execute as @e[type=minecraft:warden,tag=layj_castle] run damage @s 1 minecraft:mob_attack by @p[limit=1,sort=nearest]

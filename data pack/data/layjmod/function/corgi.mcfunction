@@ -7,4 +7,4 @@ execute as @a at @s run summon minecraft:wolf ~1 ~ ~-1 {Tags:["layj_corgi"]}
 execute as @a at @s run summon minecraft:wolf ~-1 ~ ~-1 {Tags:["layj_corgi"]}
 execute as @a at @s run summon minecraft:wolf ~ ~ ~2 {Tags:["layj_corgi"]}
 execute as @a at @s run effect give @e[type=minecraft:wolf,tag=layj_corgi] minecraft:speed infinite 2 true
-execute as @a at @s run damage @e[type=minecraft:wolf,tag=layj_corgi] 1 minecraft:mob_attack by @s
+execute as @e[type=minecraft:wolf,tag=layj_corgi] run damage @s 1 minecraft:mob_attack by @p[limit=1,sort=nearest]

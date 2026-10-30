@@ -7,5 +7,5 @@ execute as @a at @s run summon minecraft:end_crystal ~1 ~3.5 ~1 {Tags:["layj_car
 execute as @a at @s run summon minecraft:end_crystal ~-1 ~3.5 ~-1 {Tags:["layj_car_crystal"]}
 execute as @a at @s run summon minecraft:end_crystal ~1 ~3.5 ~-1 {Tags:["layj_car_crystal"]}
 execute as @a at @s run summon minecraft:end_crystal ~-1 ~3.5 ~1 {Tags:["layj_car_crystal"]}
-execute as @a at @s run damage @e[type=minecraft:end_crystal,tag=layj_car_crystal] 1 minecraft:explosion
+execute as @e[type=minecraft:end_crystal,tag=layj_car_crystal] run damage @s 1 minecraft:explosion
 execute as @a at @s run summon minecraft:tnt ~ ~1 ~ {fuse:10}
