@@ -1,0 +1,139 @@
+:root {
+  --bg: #0b0e14;
+  --panel: #11151d;
+  --border: #232a36;
+  --text: #c9d1d9;
+  --muted: #6e7891;
+  --accent: #3fb950;
+  --err: #f85149;
+  --warn: #d29922;
+  --info: #58a6ff;
+  --mono: "Cascadia Mono", Consolas, "Courier New", monospace;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 14px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 16px;
+  background: var(--panel);
+  border-bottom: 1px solid var(--border);
+}
+
+h1 {
+  margin: 0;
+  font-size: 16px;
+  letter-spacing: 2px;
+  color: var(--accent);
+}
+
+.statusline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex: none;
+}
+.dot.on { background: var(--accent); box-shadow: 0 0 6px var(--accent); }
+.dot.warn { background: var(--warn); box-shadow: 0 0 6px var(--warn); }
+.dot.off { background: var(--muted); }
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: calc(100vh - 96px);
+}
+
+#log {
+  flex: 1;
+  overflow-y: auto;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 12px;
+  line-height: 1.5;
+}
+
+.line { white-space: pre-wrap; word-break: break-word; }
+.line .time { color: var(--muted); font-size: 12px; margin-right: 8px; }
+.line.echo { color: var(--accent); }
+.line.err { color: var(--err); }
+.line.info { color: var(--info); }
+.line.broadcast { color: var(--warn); }
+.line.muted { color: var(--muted); font-style: italic; }
+
+.quickbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.quickbar button {
+  font: inherit;
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.quickbar button:hover { border-color: var(--accent); color: var(--accent); }
+
+#cmdform {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 6px 10px;
+}
+
+#cmdform .prompt { color: var(--accent); }
+
+#cmd {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text);
+  font: inherit;
+  caret-color: var(--accent);
+}
+
+#send {
+  font: inherit;
+  background: transparent;
+  color: var(--accent);
+  border: none;
+  cursor: pointer;
+  padding: 2px 6px;
+}
+
+footer {
+  color: var(--muted);
+  font-size: 11px;
+  text-align: right;
+}

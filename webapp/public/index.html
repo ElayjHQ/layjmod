@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LayjMod Console</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>LayjMod</h1>
+  <div class="statusline">
+    <select id="target" title="Server"></select>
+    <span id="dot" class="dot off"></span>
+    <span id="statusText">connecting…</span>
+  </div>
+</header>
+<main>
+  <div id="log" aria-live="polite"></div>
+  <div class="quickbar">
+    <button data-cmd="list">list</button>
+    <button data-cmd="say hello from the web console">say</button>
+    <button data-cmd="weather clear">weather clear</button>
+    <button data-cmd="save-all">save-all</button>
+    <button data-cmd="help">help</button>
+  </div>
+  <form id="cmdform" autocomplete="off">
+    <span class="prompt">&gt;</span>
+    <input id="cmd" type="text" placeholder="type a command and press Enter  (↑/↓ history)" spellcheck="false" autofocus>
+    <button id="send" type="submit" title="Send (Enter)">Send</button>
+  </form>
+  <footer>
+    ensure-order: matches /api/command | token kept server-side in servers.json
+  </footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

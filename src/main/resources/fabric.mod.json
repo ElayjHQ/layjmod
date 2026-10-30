@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "layjmod",
+  "version": "0.0.1",
+  "name": "LayjMod",
+  "description": "Server API: run console commands and query status over HTTP with token auth. Remote admin console for the Node.js website.",
+  "authors": [
+    "Nataho"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.layjmod.LayjMod"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.20.1",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
